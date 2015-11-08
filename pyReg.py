@@ -1,4 +1,5 @@
-## pyreg
+#! usr/bin/env python 
+
 import datetime
 import bs4
 import requests
