@@ -10,9 +10,6 @@ import pytz
 f = open('afterLog.html', 'w')
 
 def login_to_portal(session, username, password):
-	''' 
-	taken from Saul Shanabrook's course schedule web scraper
-	'''
     LOGIN_URL = 'https://cas.colgate.edu/cas/login'
     
     # to get sessions id cookies `JSESSIONID`
@@ -34,7 +31,7 @@ def login_to_portal(session, username, password):
     }
     r = session.post(post_url, data=data)
     
-def reg_courses(username, password):
+def reg_courses(username, password, pin):
     '''
     register for courses. TODO: Add more parameters
     '''
@@ -51,9 +48,10 @@ def reg_courses(username, password):
     
     # alternate pin
     form_data = {
-        'pin': 12345, 
+        'pin': int(pin), 
     }
     PIN_URL = "https://bannersv04.colgate.edu/prod/bwskfreg.P_CheckAltPin"
     r = session.post(PIN_URL, data=form_data)
     f.write(r.text.encode("utf-8"))
+    return session
 
