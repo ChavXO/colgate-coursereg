@@ -1,10 +1,7 @@
-#! usr/bin/env python 
-
-import datetime
+#!/usr/bin/python
 import bs4
 import requests
 import itertools
-import pytz
 
 ## temporary file that stores the page so I can later open in
 ## and analyse its contents
@@ -55,4 +52,3 @@ def reg_courses(username, password, pin):
     r = session.post(PIN_URL, data=form_data)
     f.write(r.text.encode("utf-8"))
     return session
-

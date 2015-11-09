@@ -84,7 +84,7 @@ def makeWindow () :
     return win
     
 
-#signIn()
+signIn()
 win = makeWindow()
 win.mainloop()
 
