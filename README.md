@@ -18,7 +18,7 @@ Make sure you have the bs4 library downloaded on your computer.
 
 
 ## How exactly does this work?
-Registration usually fills up within the first minute that it opens. Usually people have their alternate pins typed into a browser waiting for their time to open. When it does they quickly enter the course registration numbers on the form  at the bottom then send in their request. This app seeks to minimise thaat time. Now you can have your CRNs queued  up and as soon as your spot opens all you have to do is press send data and everything is done in a few seconds less.
+Students usually register for classes within the first minute that registration opens. Usually people have their alternate pins typed into a browser waiting for their time to open. When it does they quickly enter the course registration numbers on the form  at the bottom then send in their request. This app seeks to minimise thaat time. Now you can have your CRNs queued  up and as soon as your spot opens all you have to do is press send data and everything is done in a few seconds less.
 
 
 
