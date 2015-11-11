@@ -1,6 +1,6 @@
 #!/usr/bin/python
+import ui
 
-import UI
 # main dispatcher
 if __name__ == '__main__':
-    UI.main()
+    ui.main()
