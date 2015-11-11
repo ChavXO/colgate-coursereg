@@ -1,7 +1,5 @@
-#!/usr/bin/python
 import bs4
 import requests
-import itertools
 import getpass
 
 ## temporary file that stores the page so I can later open in

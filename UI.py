@@ -117,7 +117,8 @@ def setSelect () :
     select.delete(0,END)
     for name,phone in courseList :
         select.insert (END, name)
-session = signIn()
-win = makeWindow(session)
-setSelect ()
-win.mainloop()
+def main():
+    session = signIn()
+    win = makeWindow(session)
+    setSelect ()
+    win.mainloop()
