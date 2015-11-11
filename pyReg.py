@@ -6,7 +6,7 @@ import getpass
 
 ## temporary file that stores the page so I can later open in
 ## and analyse its contents
-f = open('afterLog.html', 'w')
+#f = open('afterLog.html', 'w')
 final_reg_URL = "https://bannersv04.colgate.edu/prod/bwckcoms.P_Regs"
 
 def login_to_portal(username, password):
@@ -35,7 +35,7 @@ def login_to_portal(username, password):
     # very primitive validation check. Must be a better way to do it with requests
     if str(soup.p)[12: 24] == "successfully":
         logged_in  = True
-    f.write(r.text.encode("utf-8"))
+    #f.write(r.text.encode("utf-8"))
     return (session, logged_in)
 
 def reg_courses(session, crns, pin):
@@ -149,7 +149,7 @@ def reg_courses(session, crns, pin):
         'RSTS_IN' : rsts_in}
                 
     r = session.post(final_reg_URL, data=reg_data)    
-    f.write(r.text.encode("utf-8"))
+    #f.write(r.text.encode("utf-8"))
     return session
 
 def reg_courses2(username, password, pin, crns):
