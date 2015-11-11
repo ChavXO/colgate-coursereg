@@ -38,6 +38,306 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 
+
+
+<div class="clearfix">
+
+  <div class="col-xs-6 col-sm-4">
+    <form id="fm1" role="form" action="/cas/login" method="post">
+      <div id="error-message" class="alert alert-danger">Username is required<br/>may not be null</div>
+      <div class="form-group Xhas-error">
+        <label class="control-label" for="username">Username</label>
+        <input id="username" name="username" autofocus="autofocus" autocorrect="off" class="form-control" type="text" autocapitalize="off" value=""/>
+      </div>
+      <div class="form-group Xhas-error">
+        <label class="control-label" for="password">Password</label>
+        <input id="password" name="password" class="form-control" type="password" value="" autocomplete="off"/>
+      </div>
+      <input type="hidden" name="lt" value="LT-219492-lbAdkk6m9sBdQopXEuxVjEGCfblf4M" />
+      <input type="hidden" name="execution" value="e1s1" />
+      <input type="hidden" name="_eventId" value="submit" />  
+
+      <button id="submit" type="submit" class="btn btn-primary btn-cu">Sign In</button>
+    </form>
+    <p><a href="https://accounts.colgate.edu">Forgot your password?</a></p>
+  </div>
+
+  <div class="cas-info col-xs-6 col-sm-8">
+    <p>This sign-in page is for students, faculty, staff, and applicants only.</p>
+    <p>If you are a new student or employee, please <a href="https://accounts.colgate.edu">set your password</a> before signing in.</p>
+    <p>If you are a new applicant and you've lost your password, please contact the <a href="http://www.colgate.edu/admission-financial-aid/contact-us">Admission Office</a>.</p>
+    <p>To protect your privacy, please quit your web browser when you are done accessing Colgate services.</p>
+    <p>Problem? Call <strong>(315) 228-7111</strong> or <strong><a href="http://www.colgate.edu/offices-and-services/information-technology/getting-help">Get ITS help</a></strong></p>
+  </div>
+
+</div>
+
+<script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/jquery.js"></script>
+<script src="/cas/cu-assets/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+<script src="/cas/cu-assets/raider/raider.js"></script>
+<script type="text/javascript">
+$(function() {
+  // focus to first input
+  $('[autofocus]:not(:focus)').eq(0).focus()
+
+  $('#fm1').on('submit', function(e) {
+    // trim whitespace on username before submit
+    $('#username').val( $.trim( $('#username').val() ) )
+    
+    // check if using ID number
+    var username = $('#username').val()
+    if (username && !isNaN(username) ) {   
+       return confirm('If you are a new student, please sign in with the Colgate username sent to you via e-mail.\n\nChoose OK to proceed as an applicant, or choose CANCEL to try logging in as a student.')
+    }
+  })
+  
+  // raider
+  setTimeout(raid, 90000)
+})
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- HACK:  added 'maximum-scale=1.0' to hack around ios zoom on orientation change. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Colgate University Secure Sign In">
+  <meta name="author" content="Colgate University">
+
+  <title>Colgate Secure Sign In</title>
+
+  <link href="/cas/cu-assets/bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cloud.webtype.com/css/cffac0c2-65b1-4786-839d-71f1954dc7e4.css" rel="stylesheet">
+  <link href="/cas/cu-assets/css/cu-cas.css" rel="stylesheet">
+  <link href="/cas/cu-assets/raider/raider.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/html5shiv.js"></script>
+  <script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TH7959"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TH7959');</script>
+<!-- End Google Tag Manager -->
+<div id="header">
+ <h1 class="cu-hide-header-text cu-page-header">Colgate University</h1>
+ <h2 class="cu-page-subhead">Secure Sign In</h2>
+</div>
+
+
+
+
+<div class="clearfix">
+
+  <div class="col-xs-6 col-sm-4">
+    <form id="fm1" role="form" action="/cas/login" method="post">
+      <div id="error-message" class="alert alert-danger">Username is required<br/>may not be null</div>
+      <div class="form-group Xhas-error">
+        <label class="control-label" for="username">Username</label>
+        <input id="username" name="username" autofocus="autofocus" autocorrect="off" class="form-control" type="text" autocapitalize="off" value=""/>
+      </div>
+      <div class="form-group Xhas-error">
+        <label class="control-label" for="password">Password</label>
+        <input id="password" name="password" class="form-control" type="password" value="" autocomplete="off"/>
+      </div>
+      <input type="hidden" name="lt" value="LT-219493-mHoh6aTMrGfgGc195QdsYDfppPivUH" />
+      <input type="hidden" name="execution" value="e1s1" />
+      <input type="hidden" name="_eventId" value="submit" />  
+
+      <button id="submit" type="submit" class="btn btn-primary btn-cu">Sign In</button>
+    </form>
+    <p><a href="https://accounts.colgate.edu">Forgot your password?</a></p>
+  </div>
+
+  <div class="cas-info col-xs-6 col-sm-8">
+    <p>This sign-in page is for students, faculty, staff, and applicants only.</p>
+    <p>If you are a new student or employee, please <a href="https://accounts.colgate.edu">set your password</a> before signing in.</p>
+    <p>If you are a new applicant and you've lost your password, please contact the <a href="http://www.colgate.edu/admission-financial-aid/contact-us">Admission Office</a>.</p>
+    <p>To protect your privacy, please quit your web browser when you are done accessing Colgate services.</p>
+    <p>Problem? Call <strong>(315) 228-7111</strong> or <strong><a href="http://www.colgate.edu/offices-and-services/information-technology/getting-help">Get ITS help</a></strong></p>
+  </div>
+
+</div>
+
+<script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/jquery.js"></script>
+<script src="/cas/cu-assets/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+<script src="/cas/cu-assets/raider/raider.js"></script>
+<script type="text/javascript">
+$(function() {
+  // focus to first input
+  $('[autofocus]:not(:focus)').eq(0).focus()
+
+  $('#fm1').on('submit', function(e) {
+    // trim whitespace on username before submit
+    $('#username').val( $.trim( $('#username').val() ) )
+    
+    // check if using ID number
+    var username = $('#username').val()
+    if (username && !isNaN(username) ) {   
+       return confirm('If you are a new student, please sign in with the Colgate username sent to you via e-mail.\n\nChoose OK to proceed as an applicant, or choose CANCEL to try logging in as a student.')
+    }
+  })
+  
+  // raider
+  setTimeout(raid, 90000)
+})
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- HACK:  added 'maximum-scale=1.0' to hack around ios zoom on orientation change. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Colgate University Secure Sign In">
+  <meta name="author" content="Colgate University">
+
+  <title>Colgate Secure Sign In</title>
+
+  <link href="/cas/cu-assets/bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cloud.webtype.com/css/cffac0c2-65b1-4786-839d-71f1954dc7e4.css" rel="stylesheet">
+  <link href="/cas/cu-assets/css/cu-cas.css" rel="stylesheet">
+  <link href="/cas/cu-assets/raider/raider.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/html5shiv.js"></script>
+  <script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TH7959"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TH7959');</script>
+<!-- End Google Tag Manager -->
+<div id="header">
+ <h1 class="cu-hide-header-text cu-page-header">Colgate University</h1>
+ <h2 class="cu-page-subhead">Secure Sign In</h2>
+</div>
+
+
+
+
+<div class="clearfix">
+
+  <div class="col-xs-6 col-sm-4">
+    <form id="fm1" role="form" action="/cas/login" method="post">
+      <div id="error-message" class="alert alert-danger">Username is required<br/>may not be null</div>
+      <div class="form-group Xhas-error">
+        <label class="control-label" for="username">Username</label>
+        <input id="username" name="username" autofocus="autofocus" autocorrect="off" class="form-control" type="text" autocapitalize="off" value=""/>
+      </div>
+      <div class="form-group Xhas-error">
+        <label class="control-label" for="password">Password</label>
+        <input id="password" name="password" class="form-control" type="password" value="" autocomplete="off"/>
+      </div>
+      <input type="hidden" name="lt" value="LT-219495-aBupA33gcHlTCasdvtWNsScAVk1nmd" />
+      <input type="hidden" name="execution" value="e1s1" />
+      <input type="hidden" name="_eventId" value="submit" />  
+
+      <button id="submit" type="submit" class="btn btn-primary btn-cu">Sign In</button>
+    </form>
+    <p><a href="https://accounts.colgate.edu">Forgot your password?</a></p>
+  </div>
+
+  <div class="cas-info col-xs-6 col-sm-8">
+    <p>This sign-in page is for students, faculty, staff, and applicants only.</p>
+    <p>If you are a new student or employee, please <a href="https://accounts.colgate.edu">set your password</a> before signing in.</p>
+    <p>If you are a new applicant and you've lost your password, please contact the <a href="http://www.colgate.edu/admission-financial-aid/contact-us">Admission Office</a>.</p>
+    <p>To protect your privacy, please quit your web browser when you are done accessing Colgate services.</p>
+    <p>Problem? Call <strong>(315) 228-7111</strong> or <strong><a href="http://www.colgate.edu/offices-and-services/information-technology/getting-help">Get ITS help</a></strong></p>
+  </div>
+
+</div>
+
+<script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/jquery.js"></script>
+<script src="/cas/cu-assets/bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+<script src="/cas/cu-assets/raider/raider.js"></script>
+<script type="text/javascript">
+$(function() {
+  // focus to first input
+  $('[autofocus]:not(:focus)').eq(0).focus()
+
+  $('#fm1').on('submit', function(e) {
+    // trim whitespace on username before submit
+    $('#username').val( $.trim( $('#username').val() ) )
+    
+    // check if using ID number
+    var username = $('#username').val()
+    if (username && !isNaN(username) ) {   
+       return confirm('If you are a new student, please sign in with the Colgate username sent to you via e-mail.\n\nChoose OK to proceed as an applicant, or choose CANCEL to try logging in as a student.')
+    }
+  })
+  
+  // raider
+  setTimeout(raid, 90000)
+})
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- HACK:  added 'maximum-scale=1.0' to hack around ios zoom on orientation change. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Colgate University Secure Sign In">
+  <meta name="author" content="Colgate University">
+
+  <title>Colgate Secure Sign In</title>
+
+  <link href="/cas/cu-assets/bootstrap-3.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cloud.webtype.com/css/cffac0c2-65b1-4786-839d-71f1954dc7e4.css" rel="stylesheet">
+  <link href="/cas/cu-assets/css/cu-cas.css" rel="stylesheet">
+  <link href="/cas/cu-assets/raider/raider.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/html5shiv.js"></script>
+  <script src="/cas/cu-assets/bootstrap-3.0.0/assets/js/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TH7959"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TH7959');</script>
+<!-- End Google Tag Manager -->
+<div id="header">
+ <h1 class="cu-hide-header-text cu-page-header">Colgate University</h1>
+ <h2 class="cu-page-subhead">Secure Sign In</h2>
+</div>
+
+
 <div class="alert alert-success" style="padding:20px; margin: 20px">
   <p>You have successfully signed in to Colgate's secure authentication system.</p>
 </div>
@@ -68,1006 +368,3 @@ $(function() {
 </body>
 </html>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
-<HTML lang="en">
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<LINK REL="stylesheet" HREF="/css/web_defaultapp.css" TYPE="text/css">
-<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
-<title>Add/Drop Classes: </title>
-<meta http-equiv="Content-Script-Type" name="Default_Script_Language" content="text/javascript">
-<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-<!-- Hide JavaScript from older browsers 
-window.onunload = function() {submitcount=0;}
-var submitcount=0;
-function checkSubmit() {
-if (submitcount == 0)
-   {
-   submitcount++;
-   return true;
-   }
-else
-   {
-alert("Your changes have already been submitted.");
-   return false;
-   }
-}
-//  End script hiding -->
-</SCRIPT>
-<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-<!-- Hide JavaScript from older browsers 
-//  Function to open a window
-function windowOpen(window_url) {
-   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
-   if (document.images) { 
-       if (helpWin) helpWin.focus()
-   }
-}
-//  End script hiding -->
-</SCRIPT>
-</head>
-<body>
-<div class="headerwrapperdiv">
-<div class="pageheaderdiv1">
-<a href="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</a>
-<h1>Colgate University Banner Self-Service</h1></DIV><div class="headerlinksdiv">
-<SPAN class="pageheaderlinks2">
-<map name="Module_Navigation_Links_H" title="Module Navigation Links">
-<p>
-<a href="#skip_Module_Navigation_Links_H" onMouseover="window.status='Skip Module Navigation Links'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Skip Module Navigation Links'; return true" onBlur="window.status=''; return true"  class="skiplinks">Skip Module Navigation Links</a>
-<table  CLASS="plaintable" SUMMARY="This is main table for displaying Tab Items."
-                          WIDTH="100%" cellSpacing=0 cellPadding=0 border=0>
-<tr>
-<TD CLASS="pldefault">
-<table  CLASS="plaintable" SUMMARY="This table displays Tab Items."
-                 cellSpacing=0 cellPadding=0 border=0>
-<tr>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_GenMnu" onMouseover="window.status='Personal Information'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Personal Information'; return true" onBlur="window.status=''; return true" >Personal Information</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_AluMnu" onMouseover="window.status='Alumni and Friends'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Alumni and Friends'; return true" onBlur="window.status=''; return true" >Alumni and Friends</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="tabon"  height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu" onMouseover="window.status='Student'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Student'; return true" onBlur="window.status=''; return true" >Student</a>
-</TD>
-<TD class="bgtabon"  height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu" onMouseover="window.status='Financial Aid'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Financial Aid'; return true" onBlur="window.status=''; return true" >Financial Aid</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=pmenu.P_MainMnu" onMouseover="window.status='Employee Services'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Employee Services'; return true" onBlur="window.status=''; return true" >Employee</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_ProxyMenu" onMouseover="window.status='InfoShare Menu'; return true" onMouseout="window.status=''; return true" onFocus="window.status='InfoShare Menu'; return true" onBlur="window.status=''; return true" >InfoShare</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-</tr>
-</table>
-</TD>
-</tr>
-<tr>
-<TD class="bgtabon" width="100%" colSpan=2><img src="/wtlgifs/web_transparent.gif" alt="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 /></TD></tr></table>
-</map>
-</SPAN>
-<a name="skip_Module_Navigation_Links_H"></a>
-</DIV>
-<table  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox."
-         WIDTH="100%">
-<tr>
-<TD CLASS="pldefault">
-<div class="headerlinksdiv2">
-<form action="/prod/twbksrch.P_ShowResults" method="post">
-Search
-<SPAN class="fieldlabeltextinvisible"><LABEL for=keyword_in_id><SPAN class="fieldlabeltext">Search</SPAN></LABEL></SPAN>
-<input type="text" name="KEYWRD_IN" size="20" maxlength="65" ID="keyword_in_id" />
-<input type="submit" value="Go" />
-</form>
-</div>
-</TD>
-<TD CLASS="pldefault"><p class="rightaligntext"></p>
-<SPAN class="pageheaderlinks">
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu"  class="submenulinktext2" id="ssbbackurl">RETURN TO MENU</a>
-|
-<a href="/prod/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu&amp;depth_in=2&amp;columns_in=3" accesskey="2" class="submenulinktext2">SITE MAP</a>
-|
-<a href="/prod/twbkfrmt.P_DispHelp?pagename_in=bwskfreg.P_AddDropCrse" accesskey="H" onClick="popup = window.open('/prod/twbkfrmt.P_DispHelp?pagename_in=bwskfreg.P_AddDropCrse', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</a>
-|
-<a href="twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</a>
-</span>
-</TD>
-</tr>
-</table>
-</DIV>
-<div class="pagetitlediv">
-<table  CLASS="plaintable" SUMMARY="This table displays title and static header displays."
-   WIDTH="100%">
-<tr>
-<TD CLASS="pldefault">
-<h2>Add/Drop Classes: </h2>
-</TD>
-<TD CLASS="pldefault">
-&nbsp;
-</TD>
-<TD CLASS="pldefault"><p class="rightaligntext"></p>
-<div class="staticheaders">
-000969006 Michael S. Chavinda<br>
-Spring 2016<br>
-NOV 10, 2015 10:34<br>
-</div>
-</TD>
-</tr>
-<tr>
-<TD class="bg3" width="100%" colSpan=3><img src="/wtlgifs/web_transparent.gif" alt="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 /></TD>
-</tr>
-</table>
-<a name="main_content"></a>
-</DIV>
-<div class="pagebodydiv">
-<!--  ** END OF twbkwbis.P_OpenDoc **  -->
-<br />
-<form action="/prod/bwckcoms.P_Regs" method="post" onSubmit="return checkSubmit()">
-<div class="infotextdiv"><table  CLASS="infotexttable" SUMMARY="This layout table contains information that may be helpful in understanding the content and functionality of this page.  It could be a brief set of instructions, a description of error messages, or other special information."><tr><td CLASS="indefault"><img src="/wtlgifs/twgginfo.gif" alt="Information" CLASS="headerImg" TITLE="Information"  NAME="Info" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=24 WIDTH=27 /></td><td CLASS="indefault"><SPAN class="infotext"> Use this interface to add or drop classes for the selected term.  If you have already registered for the term, those classes will appear in the Class Registered Successfully section. Additional classes may be added in the Add Class table. To add a class enter the Course Reference Number (CRN) in the Add Class table. Classes may be dropped by using the options available in the Action field.  If no options are listed in the Action field then the class may not be dropped. When add/drops are complete click Submit Changes.<p>If you are unsure of which classes to add, click Class Search to review the class schedule.</SPAN></td></tr></table><p></DIV>
-<input type="hidden" name="term_in" value="201502" />
-<input type="hidden" name="RSTS_IN" value="DUMMY" />
-<input type="hidden" name="assoc_term_in" value="DUMMY" />
-<input type="hidden" name="CRN_IN" value="DUMMY" />
-<input type="hidden" name="start_date_in" value="DUMMY" />
-<input type="hidden" name="end_date_in" value="DUMMY" />
-<input type="hidden" name="SUBJ" value="DUMMY" />
-<input type="hidden" name="CRSE" value="DUMMY" />
-<input type="hidden" name="SEC" value="DUMMY" />
-<input type="hidden" name="LEVL" value="DUMMY" />
-<input type="hidden" name="CRED" value="DUMMY" />
-<input type="hidden" name="GMOD" value="DUMMY" />
-<input type="hidden" name="TITLE" value="DUMMY" />
-<input type="hidden" name="MESG" value="DUMMY" />
-<input type="hidden" name="REG_BTN" value="DUMMY" />
-<h3>Current Schedule</h3>
-<table  CLASS="datadisplaytable" SUMMARY="Current Schedule">
-<tr>
-<th CLASS="ddheader" scope="col" >Status</th>
-<th CLASS="ddheader" scope="col" >Action</th>
-<th CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></th>
-<th CLASS="ddheader" scope="col" >Level</th>
-<th CLASS="ddheader" scope="col" ><ABBR title = "Credit Hours">Cred</ABBR></th>
-<th CLASS="ddheader" scope="col" >Grade Mode</th>
-<th CLASS="ddheader" scope="col" >Title</th>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />**Registered** on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id1><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id1">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10230" />10230<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="COSC" />COSC</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="435" />435</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="A" />A</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    1.000" />    1.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Computer Graphics" />Computer Graphics</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />**Registered** on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id2><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id2">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10233" />10233<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="COSC" />COSC</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="435L" />435L</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="A" />A</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    0.250" />    0.250</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Computer Graphics Lab" />Computer Graphics Lab</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />Wait List on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id3><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id3">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10222" />10222<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="COSC" />COSC</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="302" />302</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="A" />A</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    0.000" />    0.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Analysis of Algorithms" />Analysis of Algorithms</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />Wait List on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id4><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id4">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10226" />10226<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="COSC" />COSC</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="302L" />302L</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="B" />B</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    0.000" />    0.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Analysis of Algorithms Lab" />Analysis of Algorithms Lab</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />Wait List on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id5><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id5">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10624" />10624<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="WMST" />WMST</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="202" />202</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="B" />B</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    0.000" />    0.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Intro to Women's Studies" />Intro to Women's Studies</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />**Registered** on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id6><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id6">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10337" />10337<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="MATH" />MATH</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="310" />310</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="A" />A</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    1.000" />    1.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Combinatorial Problem Solving" />Combinatorial Problem Solving</td>
-</tr>
-</table>
-<br />
-<table  CLASS="plaintable" SUMMARY="Schedule Summary">
-<tr>
-<td CLASS="pldefault">Total Credit Hours: </td>
-<td CLASS="pldefault">    2.250</td>
-</tr>
-<tr>
-<td CLASS="pldefault">Billing Hours:</td>
-<td CLASS="pldefault">    2.000</td>
-</tr>
-<tr>
-<td CLASS="pldefault">Minimum Hours:</td>
-<td CLASS="pldefault">      0.000</td>
-</tr>
-<tr>
-<td CLASS="pldefault">Maximum Hours:</td>
-<td CLASS="pldefault">      4.500</td>
-</tr>
-<tr>
-<td CLASS="pldefault">Date:</td>
-<td CLASS="pldefault">NOV 10, 2015 10:34</td>
-</tr>
-</table>
-<br />
-<table  CLASS="plaintable" summary="This layout table holds message information">
-<tr>
-<TD CLASS="pldefault">
-<img src="/wtlgifs/web_stop_cascade.png" alt="Stop" CLASS="headerImg" TITLE="Stop"  NAME="web_stop" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=13 WIDTH=13 />
-</TD>
-<TD CLASS="pldefault">
-<SPAN class="errortext">Registration Update Errors</SPAN>
-<br />
-</TD>
-</tr>
-</table>
-<table  CLASS="datadisplaytable" SUMMARY="This layout table is used to present Drop or Withdrawal Errors.">
-<tr>
-<th CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></th>
-<th CLASS="ddheader" scope="col" >Status</th>
-</tr>
-<tr>
-<td CLASS="dddefault">10222</td>
-<td CLASS="dddefault">COSC</td>
-<td CLASS="dddefault">302</td>
-<td CLASS="dddefault">A</td>
-<td CLASS="dddefault">Course closed - 2 on waitlist</td>
-</tr>
-<tr>
-<td CLASS="dddefault">10226</td>
-<td CLASS="dddefault">COSC</td>
-<td CLASS="dddefault">302L</td>
-<td CLASS="dddefault">B</td>
-<td CLASS="dddefault">Course closed - 3 on waitlist </td>
-</tr>
-<tr>
-<td CLASS="dddefault">10624</td>
-<td CLASS="dddefault">WMST</td>
-<td CLASS="dddefault">202</td>
-<td CLASS="dddefault">B</td>
-<td CLASS="dddefault">RO/Reserved seats full - 13 on waitlist </td>
-</tr>
-</table>
-<h3>Add Classes Worksheet</h3>
-<table  CLASS="dataentrytable" SUMMARY="Add Classes Data Entry" WIDTH="100%">
-<tr>
-<td colspan="10" CLASS="detitle" scope="colgroup" ><ACRONYM title = "Course Reference Numbers">CRNs</ACRONYM></td>
-</tr>
-<tr>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id1><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id1" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id2><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id2" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id3><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id3" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id4><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id4" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id5><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id5" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id6><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id6" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id7><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id7" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id8><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id8" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id9><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id9" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id10><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id10" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-</table>
-<input type="hidden" name="regs_row" value="6" />
-<input type="hidden" name="wait_row" value="0" />
-<input type="hidden" name="add_row" value="10" />
-
-<br />
-<input type="submit" name="REG_BTN" value="Submit Changes" />
-<input type="submit" name="REG_BTN" value="Class Search" />
-<input type="reset" VALUE="Reset" />
-</form>
-
-<!--  ** START OF twbkwbis.P_CloseDoc **  -->
-<table  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page."
-                                             WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><tr><TD class="bgtabon" width="100%" colSpan=2><img src="/wtlgifs/web_transparent.gif" alt="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 /></TD></tr></table>
-<a href="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</a>
-</DIV>
-<div class="footerbeforediv">
-
-</DIV>
-<div class="footerlinksdiv">
-<SPAN class="pagefooterlinks">
-<map name="Add/Drop_Classes:__Links_F" title="Add/Drop Classes:  Links">
-<p>
-<a href="#skip_Add/Drop_Classes:__Links_F" onMouseover="window.status='Skip Add/Drop Classes:  Links'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Skip Add/Drop Classes:  Links'; return true" onBlur="window.status=''; return true"  class="skiplinks">Skip Add/Drop Classes:  Links</a>
-<P>[ <a href="/prod/bwskoacc.P_ViewHold" onMouseover="window.status='View Holds'; return true" onMouseout="window.status=''; return true" onFocus="window.status='View Holds'; return true" onBlur="window.status=''; return true" >View Holds</a>
- ]
-</map>
-</SPAN>
-<a name="skip_Add/Drop_Classes:__Links_F"></a>
-</DIV>
-<div class="footerafterdiv">
-
-</DIV>
-<div class="globalafterdiv">
-
-</DIV>
-<div class="globalfooterdiv">
-
-</DIV>
-<div class="pagefooterdiv">
-<SPAN class="releasetext">Release: 8.5.3</SPAN>
-</DIV>
-<div class="poweredbydiv">
-</DIV>
-<DIV class="div1"></DIV>
-<DIV class="div2"></DIV>
-<DIV class="div3"></DIV>
-<DIV class="div4"></DIV>
-<DIV class="div5"></DIV>
-<DIV class="div6"></DIV>
-<div class="banner_copyright"> <br><h5>© 2015 Ellucian Company L.P. and its affiliates.<br></h5></div>
-</body>
-</html>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/transitional.dtd">
-<HTML lang="en">
-<head>
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<LINK REL="stylesheet" HREF="/css/web_defaultapp.css" TYPE="text/css">
-<LINK REL="stylesheet" HREF="/css/web_defaultprint.css" TYPE="text/css" media="print">
-<title>Add/Drop Classes: </title>
-<meta http-equiv="Content-Script-Type" name="Default_Script_Language" content="text/javascript">
-<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-<!-- Hide JavaScript from older browsers 
-window.onunload = function() {submitcount=0;}
-var submitcount=0;
-function checkSubmit() {
-if (submitcount == 0)
-   {
-   submitcount++;
-   return true;
-   }
-else
-   {
-alert("Your changes have already been submitted.");
-   return false;
-   }
-}
-//  End script hiding -->
-</SCRIPT>
-<SCRIPT LANGUAGE="JavaScript" TYPE="text/javascript">
-<!-- Hide JavaScript from older browsers 
-//  Function to open a window
-function windowOpen(window_url) {
-   helpWin = window.open(window_url,'','toolbar=yes,status=no,scrollbars=yes,menubar=yes,resizable=yes,directories=no,location=no,width=350,height=400');
-   if (document.images) { 
-       if (helpWin) helpWin.focus()
-   }
-}
-//  End script hiding -->
-</SCRIPT>
-</head>
-<body>
-<div class="headerwrapperdiv">
-<div class="pageheaderdiv1">
-<a href="#main_content" onMouseover="window.status='Go to Main Content'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Go to Main Content'; return true" onBlur="window.status=''; return true" class="skiplinks">Go to Main Content</a>
-<h1>Colgate University Banner Self-Service</h1></DIV><div class="headerlinksdiv">
-<SPAN class="pageheaderlinks2">
-<map name="Module_Navigation_Links_H" title="Module Navigation Links">
-<p>
-<a href="#skip_Module_Navigation_Links_H" onMouseover="window.status='Skip Module Navigation Links'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Skip Module Navigation Links'; return true" onBlur="window.status=''; return true"  class="skiplinks">Skip Module Navigation Links</a>
-<table  CLASS="plaintable" SUMMARY="This is main table for displaying Tab Items."
-                          WIDTH="100%" cellSpacing=0 cellPadding=0 border=0>
-<tr>
-<TD CLASS="pldefault">
-<table  CLASS="plaintable" SUMMARY="This table displays Tab Items."
-                 cellSpacing=0 cellPadding=0 border=0>
-<tr>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_GenMnu" onMouseover="window.status='Personal Information'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Personal Information'; return true" onBlur="window.status=''; return true" >Personal Information</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_AluMnu" onMouseover="window.status='Alumni and Friends'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Alumni and Friends'; return true" onBlur="window.status=''; return true" >Alumni and Friends</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="tabon"  height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_StuMainMnu" onMouseover="window.status='Student'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Student'; return true" onBlur="window.status=''; return true" >Student</a>
-</TD>
-<TD class="bgtabon"  height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_FinAidMainMnu" onMouseover="window.status='Financial Aid'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Financial Aid'; return true" onBlur="window.status=''; return true" >Financial Aid</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=pmenu.P_MainMnu" onMouseover="window.status='Employee Services'; return true" onMouseout="window.status=''; return true" onFocus="window.status='Employee Services'; return true" onBlur="window.status=''; return true" >Employee</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-<td class="taboff" height=22>
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_ProxyMenu" onMouseover="window.status='InfoShare Menu'; return true" onMouseout="window.status=''; return true" onFocus="window.status='InfoShare Menu'; return true" onBlur="window.status=''; return true" >InfoShare</a>
-</TD>
-<TD class="bgtaboff" height=22 vAlign="top" align="right">
-<img src="/wtlgifs/web_tab_corner_right.gif" alt="Tab Corner Right" CLASS="headerImg" TITLE="Tab Corner Right"  NAME="web_tab_corner_right" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=20 WIDTH=8 />
-</TD>
-</tr>
-</table>
-</TD>
-</tr>
-<tr>
-<TD class="bgtabon" width="100%" colSpan=2><img src="/wtlgifs/web_transparent.gif" alt="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 /></TD></tr></table>
-</map>
-</SPAN>
-<a name="skip_Module_Navigation_Links_H"></a>
-</DIV>
-<table  CLASS="plaintable" SUMMARY="This table displays Menu Items and Banner Search textbox."
-         WIDTH="100%">
-<tr>
-<TD CLASS="pldefault">
-<div class="headerlinksdiv2">
-<form action="/prod/twbksrch.P_ShowResults" method="post">
-Search
-<SPAN class="fieldlabeltextinvisible"><LABEL for=keyword_in_id><SPAN class="fieldlabeltext">Search</SPAN></LABEL></SPAN>
-<input type="text" name="KEYWRD_IN" size="20" maxlength="65" ID="keyword_in_id" />
-<input type="submit" value="Go" />
-</form>
-</div>
-</TD>
-<TD CLASS="pldefault"><p class="rightaligntext"></p>
-<SPAN class="pageheaderlinks">
-<a href="/prod/twbkwbis.P_GenMenu?name=bmenu.P_RegMnu"  class="submenulinktext2" id="ssbbackurl">RETURN TO MENU</a>
-|
-<a href="/prod/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu&amp;depth_in=2&amp;columns_in=3" accesskey="2" class="submenulinktext2">SITE MAP</a>
-|
-<a href="/prod/twbkfrmt.P_DispHelp?pagename_in=bwskfreg.P_AddDropCrse" accesskey="H" onClick="popup = window.open('/prod/twbkfrmt.P_DispHelp?pagename_in=bwskfreg.P_AddDropCrse', 'PopupPage','height=500,width=450,scrollbars=yes,resizable=yes'); return false" target="_blank" onMouseOver="window.status='';  return true" onMouseOut="window.status=''; return true"onFocus="window.status='';  return true" onBlur="window.status=''; return true"  class="submenulinktext2">HELP</a>
-|
-<a href="twbkwbis.P_Logout" accesskey="3" class="submenulinktext2">EXIT</a>
-</span>
-</TD>
-</tr>
-</table>
-</DIV>
-<div class="pagetitlediv">
-<table  CLASS="plaintable" SUMMARY="This table displays title and static header displays."
-   WIDTH="100%">
-<tr>
-<TD CLASS="pldefault">
-<h2>Add/Drop Classes: </h2>
-</TD>
-<TD CLASS="pldefault">
-&nbsp;
-</TD>
-<TD CLASS="pldefault"><p class="rightaligntext"></p>
-<div class="staticheaders">
-000969006 Michael S. Chavinda<br>
-Spring 2016<br>
-NOV 10, 2015 10:35<br>
-</div>
-</TD>
-</tr>
-<tr>
-<TD class="bg3" width="100%" colSpan=3><img src="/wtlgifs/web_transparent.gif" alt="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 /></TD>
-</tr>
-</table>
-<a name="main_content"></a>
-</DIV>
-<div class="pagebodydiv">
-<!--  ** END OF twbkwbis.P_OpenDoc **  -->
-<br />
-<form action="/prod/bwckcoms.P_Regs" method="post" onSubmit="return checkSubmit()">
-<div class="infotextdiv"><table  CLASS="infotexttable" SUMMARY="This layout table contains information that may be helpful in understanding the content and functionality of this page.  It could be a brief set of instructions, a description of error messages, or other special information."><tr><td CLASS="indefault"><img src="/wtlgifs/twgginfo.gif" alt="Information" CLASS="headerImg" TITLE="Information"  NAME="Info" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=24 WIDTH=27 /></td><td CLASS="indefault"><SPAN class="infotext"> Use this interface to add or drop classes for the selected term.  If you have already registered for the term, those classes will appear in the Class Registered Successfully section. Additional classes may be added in the Add Class table. To add a class enter the Course Reference Number (CRN) in the Add Class table. Classes may be dropped by using the options available in the Action field.  If no options are listed in the Action field then the class may not be dropped. When add/drops are complete click Submit Changes.<p>If you are unsure of which classes to add, click Class Search to review the class schedule.</SPAN></td></tr></table><p></DIV>
-<input type="hidden" name="term_in" value="201502" />
-<input type="hidden" name="RSTS_IN" value="DUMMY" />
-<input type="hidden" name="assoc_term_in" value="DUMMY" />
-<input type="hidden" name="CRN_IN" value="DUMMY" />
-<input type="hidden" name="start_date_in" value="DUMMY" />
-<input type="hidden" name="end_date_in" value="DUMMY" />
-<input type="hidden" name="SUBJ" value="DUMMY" />
-<input type="hidden" name="CRSE" value="DUMMY" />
-<input type="hidden" name="SEC" value="DUMMY" />
-<input type="hidden" name="LEVL" value="DUMMY" />
-<input type="hidden" name="CRED" value="DUMMY" />
-<input type="hidden" name="GMOD" value="DUMMY" />
-<input type="hidden" name="TITLE" value="DUMMY" />
-<input type="hidden" name="MESG" value="DUMMY" />
-<input type="hidden" name="REG_BTN" value="DUMMY" />
-<h3>Current Schedule</h3>
-<table  CLASS="datadisplaytable" SUMMARY="Current Schedule">
-<tr>
-<th CLASS="ddheader" scope="col" >Status</th>
-<th CLASS="ddheader" scope="col" >Action</th>
-<th CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></th>
-<th CLASS="ddheader" scope="col" >Level</th>
-<th CLASS="ddheader" scope="col" ><ABBR title = "Credit Hours">Cred</ABBR></th>
-<th CLASS="ddheader" scope="col" >Grade Mode</th>
-<th CLASS="ddheader" scope="col" >Title</th>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />**Registered** on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id1><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id1">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10230" />10230<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="COSC" />COSC</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="435" />435</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="A" />A</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    1.000" />    1.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Computer Graphics" />Computer Graphics</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />**Registered** on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id2><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id2">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10233" />10233<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="COSC" />COSC</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="435L" />435L</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="A" />A</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    0.250" />    0.250</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Computer Graphics Lab" />Computer Graphics Lab</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />Wait List on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id3><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id3">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10222" />10222<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="COSC" />COSC</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="302" />302</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="A" />A</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    0.000" />    0.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Analysis of Algorithms" />Analysis of Algorithms</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />Wait List on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id4><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id4">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10226" />10226<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="COSC" />COSC</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="302L" />302L</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="B" />B</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    0.000" />    0.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Analysis of Algorithms Lab" />Analysis of Algorithms Lab</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />Wait List on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id5><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id5">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10624" />10624<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="WMST" />WMST</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="202" />202</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="B" />B</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    0.000" />    0.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Intro to Women's Studies" />Intro to Women's Studies</td>
-</tr>
-<tr>
-<td CLASS="dddefault"><input type="hidden" name="MESG" value="DUMMY" />**Registered** on NOV 10, 2015</td>
-<TD CLASS="dddefault">
-<LABEL for=action_id6><SPAN class="fieldlabeltextinvisible">Action</SPAN></LABEL>
-<select name="RSTS_IN" size="1" ID="action_id6">
-<OPTION VALUE="" SELECTED>None
-<OPTION VALUE="DD">Drop/Delete
-</select>
-</TD>
-<td CLASS="dddefault"><input type="hidden" name="assoc_term_in" value="201502" /><input type="hidden" name="CRN_IN" value="10337" />10337<input type="hidden" name="start_date_in" value="01/18/2016" /><input type="hidden" name="end_date_in" value="05/06/2016" /></td>
-<td CLASS="dddefault"><input type="hidden" name="SUBJ" value="MATH" />MATH</td>
-<td CLASS="dddefault"><input type="hidden" name="CRSE" value="310" />310</td>
-<td CLASS="dddefault"><input type="hidden" name="SEC" value="A" />A</td>
-<td CLASS="dddefault"><input type="hidden" name="LEVL" value="Undergraduate" />Undergraduate</td>
-<td CLASS="dddefault"><input type="hidden" name="CRED" value="    1.000" />    1.000</td>
-<td CLASS="dddefault"><input type="hidden" name="GMOD" value="Graded" />Graded</td>
-<td CLASS="dddefault"><input type="hidden" name="TITLE" value="Combinatorial Problem Solving" />Combinatorial Problem Solving</td>
-</tr>
-</table>
-<br />
-<table  CLASS="plaintable" SUMMARY="Schedule Summary">
-<tr>
-<td CLASS="pldefault">Total Credit Hours: </td>
-<td CLASS="pldefault">    2.250</td>
-</tr>
-<tr>
-<td CLASS="pldefault">Billing Hours:</td>
-<td CLASS="pldefault">    2.000</td>
-</tr>
-<tr>
-<td CLASS="pldefault">Minimum Hours:</td>
-<td CLASS="pldefault">      0.000</td>
-</tr>
-<tr>
-<td CLASS="pldefault">Maximum Hours:</td>
-<td CLASS="pldefault">      4.500</td>
-</tr>
-<tr>
-<td CLASS="pldefault">Date:</td>
-<td CLASS="pldefault">NOV 10, 2015 10:35</td>
-</tr>
-</table>
-<br />
-<table  CLASS="plaintable" summary="This layout table holds message information">
-<tr>
-<TD CLASS="pldefault">
-<img src="/wtlgifs/web_stop_cascade.png" alt="Stop" CLASS="headerImg" TITLE="Stop"  NAME="web_stop" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=13 WIDTH=13 />
-</TD>
-<TD CLASS="pldefault">
-<SPAN class="errortext">Registration Update Errors</SPAN>
-<br />
-</TD>
-</tr>
-</table>
-<table  CLASS="datadisplaytable" SUMMARY="This layout table is used to present Drop or Withdrawal Errors.">
-<tr>
-<th CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></th>
-<th CLASS="ddheader" scope="col" >Status</th>
-</tr>
-<tr>
-<td CLASS="dddefault">10222</td>
-<td CLASS="dddefault">COSC</td>
-<td CLASS="dddefault">302</td>
-<td CLASS="dddefault">A</td>
-<td CLASS="dddefault">Course closed - 2 on waitlist</td>
-</tr>
-<tr>
-<td CLASS="dddefault">10226</td>
-<td CLASS="dddefault">COSC</td>
-<td CLASS="dddefault">302L</td>
-<td CLASS="dddefault">B</td>
-<td CLASS="dddefault">Course closed - 3 on waitlist </td>
-</tr>
-<tr>
-<td CLASS="dddefault">10624</td>
-<td CLASS="dddefault">WMST</td>
-<td CLASS="dddefault">202</td>
-<td CLASS="dddefault">B</td>
-<td CLASS="dddefault">RO/Reserved seats full - 13 on waitlist </td>
-</tr>
-</table>
-<table  CLASS="plaintable" summary="This layout table holds message information">
-<tr>
-<TD CLASS="pldefault">
-<img src="/wtlgifs/web_stop_cascade.png" alt="Stop" CLASS="headerImg" TITLE="Stop"  NAME="web_stop" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=13 WIDTH=13 />
-</TD>
-<TD CLASS="pldefault">
-<SPAN class="errortext">Registration Add Errors</SPAN>
-<br />
-</TD>
-</tr>
-</table>
-<table  CLASS="datadisplaytable" SUMMARY="This layout table is used to present Registration Errors.">
-<tr>
-<th CLASS="ddheader" scope="col" >Status</th>
-<th CLASS="ddheader" scope="col" ><ACRONYM title = "Course Reference Number">CRN</ACRONYM></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Subject>Subj</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Course>Crse</ABBR></th>
-<th CLASS="ddheader" scope="col" ><ABBR title = Section>Sec</ABBR></th>
-<th CLASS="ddheader" scope="col" >Level</th>
-<th CLASS="ddheader" scope="col" ><ABBR title = "Credit Hours">Cred</ABBR></th>
-<th CLASS="ddheader" scope="col" >Grade Mode</th>
-<th CLASS="ddheader" scope="col" >Title</th>
-</tr>
-<tr>
-<td CLASS="dddefault">DUPLICATE <ACRONYM title = "Course Reference Number">CRN</ACRONYM></td>
-<td CLASS="dddefault">10337</td>
-<td CLASS="dddefault">MATH</td>
-<td CLASS="dddefault">310</td>
-<td CLASS="dddefault">A</td>
-<td CLASS="dddefault">Undergraduate</td>
-<td CLASS="dddefault">&nbsp;</td>
-<td CLASS="dddefault">&nbsp;</td>
-<td CLASS="dddefault">Combinatorial Problem Solving</td>
-</tr>
-</table>
-<br />
-<h3>Add Classes Worksheet</h3>
-<table  CLASS="dataentrytable" SUMMARY="Add Classes Data Entry" WIDTH="100%">
-<tr>
-<td colspan="10" CLASS="detitle" scope="colgroup" ><ACRONYM title = "Course Reference Numbers">CRNs</ACRONYM></td>
-</tr>
-<tr>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id1><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id1" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id2><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id2" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id3><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id3" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id4><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id4" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id5><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id5" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id6><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id6" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id7><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id7" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id8><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id8" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id9><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id9" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-<TD CLASS="dedefault">
-<input type="hidden" name="RSTS_IN" value="RE" />
-<LABEL for=crn_id10><SPAN class="fieldlabeltextinvisible">CRN</SPAN></LABEL>
-<input type="text" name="CRN_IN" size="6" maxlength="5" ID="crn_id10" />
-<input type="hidden" name="assoc_term_in" value="" />
-<input type="hidden" name="start_date_in" value="" />
-<input type="hidden" name="end_date_in" value="" />
-</TD>
-</table>
-<input type="hidden" name="regs_row" value="6" />
-<input type="hidden" name="wait_row" value="0" />
-<input type="hidden" name="add_row" value="10" />
-
-<br />
-<input type="submit" name="REG_BTN" value="Submit Changes" />
-<input type="submit" name="REG_BTN" value="Class Search" />
-<input type="reset" VALUE="Reset" />
-</form>
-
-<!--  ** START OF twbkwbis.P_CloseDoc **  -->
-<table  CLASS="plaintable" SUMMARY="This is table displays line separator at end of the page."
-                                             WIDTH="100%" cellSpacing=0 cellPadding=0 border=0><tr><TD class="bgtabon" width="100%" colSpan=2><img src="/wtlgifs/web_transparent.gif" alt="Transparent Image" CLASS="headerImg" TITLE="Transparent Image"  NAME="web_transparent" HSPACE=0 VSPACE=0 BORDER=0 HEIGHT=3 WIDTH=10 /></TD></tr></table>
-<a href="#top" onMouseover="window.status='Skip to top of page'; return true" onMouseout="window.status=''; return true" OnFocus="window.status='Skip to top of page'; return true" onBlur="window.status=''; return true" class="skiplinks">Skip to top of page</a>
-</DIV>
-<div class="footerbeforediv">
-
-</DIV>
-<div class="footerlinksdiv">
-<SPAN class="pagefooterlinks">
-<map name="Add/Drop_Classes:__Links_F" title="Add/Drop Classes:  Links">
-<p>
-<a href="#skip_Add/Drop_Classes:__Links_F" onMouseover="window.status='Skip Add/Drop Classes:  Links';
