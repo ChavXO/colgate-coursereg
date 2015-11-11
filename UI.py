@@ -12,7 +12,7 @@ courseList = []
 class Login(tkSimpleDialog.Dialog):
 
     def body(self, master):
-	#master.destroy()
+    #master.destroy()
         Label(master, text="Username:").grid(row=0)
         Label(master, text="Password:").grid(row=1)
         Label(master, text="PIN     :").grid(row=2)
@@ -22,11 +22,11 @@ class Login(tkSimpleDialog.Dialog):
         self.e1.grid(row=0, column=1)
         self.e2.grid(row=1, column=1)
         self.e3.grid(row=2, column=1)
-	#master.withdraw()
+    #master.withdraw()
         return self.e1 # initial focus
 
     def apply(self):
-	global username, password, reg_pin
+        global username, password, reg_pin
         username = str(self.e1.get())
         password = str(self.e2.get())
         reg_pin = str(self.e3.get())
@@ -72,7 +72,8 @@ def loadEntry  () :
     courseNameVar.set(phone)
 
 def sendData(session):
-    return pyReg.reg_courses(session, courseList, reg_pin)
+    sendlist = map(lambda s: s[0], courseList)
+    return pyReg.reg_courses(session, sendlist, reg_pin)
 
 def makeWindow (session) :
     global crnVar, courseNameVar, select

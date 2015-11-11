@@ -46,28 +46,128 @@ def reg_courses(session, crns, pin):
     
     PIN_URL = "https://bannersv04.colgate.edu/prod/bwskfreg.P_CheckAltPin"
     r = session.post(PIN_URL, data=pin_data)
-    f.write(r.text.encode("utf-8"))
-    reg_data = {'REG_BTN': "Submit Changes",
-		'term_in': 201502,
-		'CRN_IN' : crns,
-		'start_date_in': "DUMMY",
-		'assoc_term_in': "DUMMY",
-		'CRSE': "DUMMY",
-		'TITLE': "DUMMY",
-		'GMOD': "DUMMY",
-		'MESG': "DUMMY",
-		'CRED': "DUMMY",
-		'LEVL': "DUMMY",
-		'SUBJ': "DUMMY",
-		'SEC': "DUMMY",
-		'REGS_ROW': 0,
-		'WAIT_ROW': 0,
-		'ADD_ROW': 10,
-		'end_date_in': "DUMMY",
-		'RSTS_IN' : "RE"}
-				
+    #f.write(r.text.encode("utf-8"))
+    
+    #scrape required data from file
+    soup = bs4.BeautifulSoup(r.text)
+    wait_row = soup.find('input', attrs={'name':'wait_row'})['value']
+    add_row = soup.find('input', attrs={'name':'add_row'})['value']
+    regs_row = soup.find('input', attrs={'name':'regs_row'})['value']
+    print regs_row, add_row, wait_row
+    rsts_in_dict = soup.find_all('input', attrs={'name':'RSTS_IN'})
+    rsts_in = []
+    for i in rsts_in_dict:
+        rsts_in.append(i['value'])
+    print rsts_in
+    
+    assoc_term_dict = soup.find_all('input', attrs={'name':'assoc_term_in'})
+    assoc_term_in = []
+    for i in assoc_term_dict:
+        assoc_term_in.append(i['value'])
+    print assoc_term_in
+    
+    start_date_dict = soup.find_all('input', attrs={'name':'start_date_in'})
+    start_date_in = []
+    for i in start_date_dict:
+        start_date_in.append(i['value'])
+    print start_date_in
+    
+    end_date_dict = soup.find_all('input', attrs={'name':'end_date_in'})
+    end_date_in = []
+    for i in end_date_dict:
+        end_date_in.append(i['value'])
+    print end_date_in
+    
+    crn_dict = soup.find_all('input', attrs={'name':'CRN_IN'})
+    crn_in = []
+    for i in crn_dict:
+        try:
+            crn_in.append(i['value'])
+        except:
+            crn_in.append("")
+    crn_in += crns
+    print crn_in
+
+    subj_dict = soup.find_all('input', attrs={'name':'SUBJ'})
+    subj = []
+    for i in subj_dict:
+        subj.append(i['value'])
+    print subj
+    
+    crse_dict = soup.find_all('input', attrs={'name':'CRSE'})
+    crse = []
+    for i in crse_dict:
+        crse.append(i['value'])
+    print crse
+    
+    sec_dict = soup.find_all('input', attrs={'name':'SEC'})
+    sec = []
+    for i in sec_dict:
+        sec.append(i['value'])
+    print sec
+    
+    levl_dict = soup.find_all('input', attrs={'name':'LEVL'})
+    levl = []
+    for i in levl_dict:
+        levl.append(i['value'])
+    print levl
+    
+    cred_dict = soup.find_all('input', attrs={'name':'CRED'})
+    cred = []
+    for i in cred_dict:
+        cred.append(i['value'])
+    print cred
+    
+    gmod_dict = soup.find_all('input', attrs={'name':'GMOD'})
+    gmod = []
+    for i in gmod_dict:
+        gmod.append(i['value'])
+    print gmod
+    
+    title_dict = soup.find_all('input', attrs={'name':'TITLE'})
+    title = []
+    for i in title_dict:
+        title.append(i['value'])
+    print title
+    
+    mesg_dict = soup.find_all('input', attrs={'name':'MESG'})
+    mesg = []
+    for i in mesg_dict:
+        mesg.append(i['value'])
+    print mesg
+    
+    reg_btn_dict = soup.find_all('input', attrs={'name':'REG_BTN'})
+    reg_btn = []
+    for i in reg_btn_dict:
+        reg_btn.append(i['value'])
+    reg_btn += ["Submit Changes"]
+    print reg_btn
+    
+    reg_data = {'REG_BTN': ["DUMMY", "Submit Changes"],
+        'term_in': 201502,
+        'CRN_IN' : crn_in,
+        'start_date_in': start_date_in,
+        'assoc_term_in': assoc_term_in,
+        'CRSE': crse,
+        'TITLE': title,
+        'GMOD': gmod,
+        'MESG': mesg,
+        'CRED': cred,
+        'LEVL': levl,
+        'SUBJ': subj,
+        'SEC': sec,
+        'REGS_ROW': regs_row,
+        'WAIT_ROW': wait_row,
+        'ADD_ROW': add_row,
+        'end_date_in': end_date_in,
+        'RSTS_IN' : rsts_in}
+    """reg_data = {'REG_BTN': "Submit Changes",
+        'term_in': 201502,
+        'CRN_IN' : crns,
+        'RSTS_IN' : "RE" * len(crns)}"""
+                
     r = session.post(final_reg_URL, data=reg_data)    
-    print r.text
+    f.write(r.text.encode("utf-8"))
     return session
 
 def reg_courses2(username, password, pin, crns):
@@ -77,8 +177,8 @@ def reg_courses2(username, password, pin, crns):
     session = login_to_portal(username, password)
     session = login_to_banner(session, pin)
     reg_data = {'REG_BTN': "Submit Changes",
-				'CRN_IN' : crns}
-				
+                'CRN_IN' : crns}
+                
     r = session.post(final_reg_URL, data=reg_data)
     return session
 
@@ -99,8 +199,8 @@ def get_crns():
     while True:
         crn = raw_input(str(i) + ") Enter CRN (Press enter when done.)- ")
         if crn.strip() == "":
-	    print "Done."
-	    break
+            print "Done."
+            break
         try:
             crns.append(str(int(crn.strip())))
         except:
